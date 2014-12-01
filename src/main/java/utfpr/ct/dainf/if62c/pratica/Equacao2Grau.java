@@ -52,20 +52,17 @@ public class Equacao2Grau<T extends Number> {
     }
     
     public double getRaiz1(){
-        double A = a.doubleValue(),B = b.doubleValue(),C = c.doubleValue(),x,delta = Math.pow(B, 2) - 4*A*C;
-        if (delta<0){
+        if (Math.pow(b.doubleValue(),2) - 4*a.doubleValue()*c.doubleValue()<0){
             throw new RuntimeException("Equação não tem solução real");
         }
-        x = (-B + Math.sqrt(delta))/(2*A);
-        return x;
+        return (-b.doubleValue() + Math.sqrt(Math.pow(b.doubleValue(),2) - 4*a.doubleValue()*c.doubleValue()))/(2*a.doubleValue());
+
     }
     
     public double getRaiz2(){
-        double A = a.doubleValue(),B = b.doubleValue(),C = c.doubleValue(),x,delta = Math.pow(B, 2) - 4*A*C;
-        if (delta<0){
+        if (Math.pow(b.doubleValue(),2) - 4*a.doubleValue()*c.doubleValue()<0){
             throw new RuntimeException("Equação não tem solução real");
         }
-        x = (-B - Math.sqrt(delta))/(2*A);
-        return x;
+        return (-b.doubleValue() - Math.sqrt(Math.pow(b.doubleValue(),2) - 4*a.doubleValue()*c.doubleValue()))/(2*a.doubleValue());
     }
 }
