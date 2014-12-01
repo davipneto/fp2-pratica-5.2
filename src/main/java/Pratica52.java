@@ -29,13 +29,20 @@ public class Pratica52 {
         }
         
         try{
-        Equacao2Grau<Integer> eq3 = new Equacao2Grau<>(1,2,3);
-        System.out.println("Raízes da eq3: " + eq3.getRaiz1() + " e " + eq3.getRaiz2());
+            Equacao2Grau<Integer> eq3 = new Equacao2Grau<>(1,2,3);
+            System.out.println("Raízes da eq3: " + eq3.getRaiz1() + " e " + eq3.getRaiz2());
         }
         catch (RuntimeException e){
             System.out.println(e.getLocalizedMessage());
         }
         
+        try{
+            Equacao2Grau<Integer> eq4 = new Equacao2Grau(0,4,6);
+            System.out.println("Raízes da eq4: " + eq4.getRaiz1() + " e " + eq4.getRaiz2());
+        }
+        catch (RuntimeException e){
+            System.out.println(e.getLocalizedMessage());
+        }
         System.out.println("Fim!");
     }
 }
